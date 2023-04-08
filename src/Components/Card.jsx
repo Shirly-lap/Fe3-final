@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({name, username, id, email }) => {
   
-  const [dentistState, setDentistState] = useState({});
+  const [dentista, setDentista] = useState({});
  // const [isFavorited, setIsFavorited] = useState(false);
 
   const url = 'https://jsonplaceholder.typicode.com/users/' + id;
@@ -13,22 +13,22 @@ const Card = ({name, username, id, email }) => {
   useEffect(() => {
     fetch(url)
       .then(res => res.json())
-      .then(data => setDentistState(data))
+      .then(data => setDentista(data))
   }, [])
 
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
     const favs = JSON.parse(localStorage.getItem('favs')) || [];
-    const existingFav = favs.findIndex(fav => fav.id === dentistState.id);
+    const exFavs = favs.findIndex(fav => fav.id === dentista.id);
     
-    if (existingFav === -1) {
-      const favsNew =[...favs,dentistState]
+    if (exFavs === -1) {
+      const favsNew =[...favs,dentista]
       localStorage.setItem('favs', JSON.stringify(favsNew))
     } else {
-      const favsNew = favs.filter((fav) => fav.id !== dentistState.id);
+      const favsNew = favs.filter((fav) => fav.id !== dentista.id);
       localStorage.setItem('favs', JSON.stringify(favsNew));
     }
-    console.log(existingFav);
+    console.log(exFavs);
   };
   return (
     <div className="card">
@@ -39,7 +39,7 @@ const Card = ({name, username, id, email }) => {
     <Link to={`/details/${id}`} style={{marginTop:'2vw'}}><h3>{name}</h3></Link>
     <h5>{username}</h5>
     <h5>{email}</h5>
-    <button onClick={addFav} className="favButton">Add fav</button>
+    <button onClick={addFav} className="favButton">⭐</button>
     {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
 
     {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}

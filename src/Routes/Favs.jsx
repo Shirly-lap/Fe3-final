@@ -13,16 +13,15 @@ const Favs = () => {
 
   return (
     <>
-      <h1>Dentists Favs</h1>
+      <h1 style={{marginTop:'10vw'}}>Dentits Favs</h1>
       <div className="card-grid">
-      {parsedFavs.map(dentis => (
-        
-        <div className="card" key={dentis.id}>
+      {parsedFavs.map(dentista => (
+        <div className="card" key={dentista.id}>
          <img style={{width: "180px"}} src={doctor} alt="doctor" />
-        <h2>{dentis.id}</h2>
-        <h2>{dentis.name}</h2>
-        <h2>{dentis.username}</h2>
-        <Link to={`/details/${dentis.id}`}>
+        <h2>{dentista.id}</h2>
+        <h2>{dentista.name}</h2>
+        <h2>{dentista.username}</h2>
+        <Link to={`/details/${dentista.id}`}>
      <h4 style={{ color: 'red' }}>Detail</h4>
    </Link>
       
