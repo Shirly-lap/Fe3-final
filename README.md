@@ -98,9 +98,3 @@ Mucha suerte y éxitos!
 >>>>>>> 65c266cd21e8cc3c68e3be7b78a6a68bf84313b8
 
 
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Shirly-lap/Fe3-final.git
-git push -u origin main
