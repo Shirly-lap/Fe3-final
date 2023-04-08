@@ -15,7 +15,7 @@ function App() {
           <Route path={routes.Contact} element={<Contact/>} />
           <Route path={routes.Favs} element={<Favs/>} />
           <Route path={routes.Home} element={<Home/>} />
-          <Route exact path='/details/:id' element={<Detail/>} />
+          <Route path={routes.Details} element={<Detail/>} />
         </Routes>
           <Navbar/>
           

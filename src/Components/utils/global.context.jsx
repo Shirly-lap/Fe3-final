@@ -17,7 +17,9 @@ export const ContextProvider = ({ children }) => {
       .catch((error) => console.error(error))
   }, []);
 
-  console.log(datos);
+  
+
+
   return (
     <ContextGlobal.Provider value={{ datos,changeTheme }}>
       {children}
