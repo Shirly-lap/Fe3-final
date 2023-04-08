@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+*{padding:0; margin: 0; box-sizing: border-box; max-width: 100%;}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,23 +14,51 @@ code {
     monospace;
 }
 .favButton{
-  background-color: rgba(136, 136, 136, 0.116);
+  margin-top: 1vw;
+  background-color:#f21d1d;
   padding: 10px;
   border: none;
   width: 100%;
   cursor: pointer;
+  color: #fcf7fc;
 }
 
 h1{
   text-align: center;
+  padding: 2rem 0;
 }
 
 nav{
   display: flex;
   width: 80vw;
-  justify-content: flex-start;
   padding: 1rem;
+  font-size: 1.2vw;
+  position: absolute;
+  justify-content: flex-end;
+width: 20vw;
+top: -0.3vw;
+right: 10vw;
+height: 4vw;
+color:#b6b4b6;
+font-weight:400;
+font-size:1.1vw;
+cursor:"pointer";
 }
+
+.nabvarDh{
+  font-size: 30px;
+  margin-left: 10vw;
+  position: relative;
+  color: #f21d1d;
+}
+
+
+nav button{
+  height: 3vw;
+  width: 3vw;
+  
+}
+
 
 a{
   color: #000;
@@ -49,17 +79,9 @@ footer {
   bottom: 0;
   width: 90%;
   height: 40px;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
-footer > img{
-  width: 200px;
-  margin: 0;
-}
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
-}
 
 form{
   display: flex;
@@ -79,9 +101,14 @@ form{
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
 }
+.card button:hover
+{
+  background-color: #1257c6;
+  cursor: pointer;
+}
 
 .card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+  border: 0.5px solid rgb(196, 231, 0);
 }
 
 .card-grid{
@@ -112,11 +139,26 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+section
+{
+background-color: #d8d3d8;
+position: absolute;
+height: 4vw;
+width: 100%;
+margin: 0 auto;
+top: 0vw;
+font-family: 'roboto';
+}
 
 .dark{
-  background-color: #12121296;
+  background-color: #12121296 !important; 
+  color: white !important;
+}
+.dark a {
   color: white;
 }
-.dark > a {
-  color: white;
+
+.dark section{
+  background-color: #12121296 !important; 
+  color: white !important;
 }
